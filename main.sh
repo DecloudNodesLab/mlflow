@@ -66,9 +66,6 @@ do
   sleep 3
 done
 
-echo "Running MLflow database migrations..."
-mlflow db upgrade "${BACKEND_STORE_URI}"
-
 echo "Starting MLflow server..."
 exec mlflow server \
   --host 0.0.0.0 \
